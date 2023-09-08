@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942803814219694632}
-  m_LocalRotation: {x: -0, y: 0.026521515, z: -0, w: 0.9996483}
+  m_LocalRotation: {x: 0, y: 0.026517138, z: 0, w: 0.9996484}
   m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
@@ -136,5 +136,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoops:
   - {fileID: 802285860133011439, guid: cbbf600de8f36694188e7609d368c368, type: 3}
+  - {fileID: 982469434204807399, guid: 9e9a69e9e1715ea40ac8a55ba8876d55, type: 3}
+  - {fileID: 982469434204807399, guid: c8fef70f22c0af14eb57ffa8d11301f1, type: 3}
+  - {fileID: 982469434204807399, guid: 22e1f700ad5a58246af60392a75f74f1, type: 3}
+  - {fileID: 982469434204807399, guid: 48e0bb287c18f7b48892e2fbc9747f11, type: 3}
   basePoint: {fileID: 942803814219694632}
-  hoopDistance: 2
+  hoopDistance: 5

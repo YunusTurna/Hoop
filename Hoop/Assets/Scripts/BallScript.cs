@@ -8,6 +8,8 @@ public class BallScript : MonoBehaviour
     Rigidbody rb;
     [SerializeField] private float forcePower = 10f;
     public bool camLock = false;
+
+    public int score = 0;
     
     
     void Start()
@@ -27,6 +29,10 @@ public class BallScript : MonoBehaviour
         if(other.gameObject.tag == "nextHoop")
         {
             camLock = true;
+        }
+        if(other.gameObject.tag == "Score")
+        {
+            score++;
         }
         
     }

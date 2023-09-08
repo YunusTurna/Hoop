@@ -6,6 +6,9 @@ TagManager:
   tags:
   - MainBall
   - nextHoop
+  - Score
+  - ScoreReducer
+  - ScoreMultiplier
   layers:
   - Default
   - TransparentFX

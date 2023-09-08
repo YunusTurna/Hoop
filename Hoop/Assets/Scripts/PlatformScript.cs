@@ -4,28 +4,17 @@ using UnityEngine;
 
 public class PlatformScript : MonoBehaviour
 {
-    
-    [SerializeField] private float rotationSpeed = 50.0f; 
+    [SerializeField] private float rotationSpeed = 50.0f;
+    private float rotationX = 0.0f;
+    private float rotationY = 0.0f;
 
     void Update()
     {
-       
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            RotateObject(Vector3.up);
-        }
-
+        // Fare eksenlerinin hareketini al
+        rotationX += Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
         
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            RotateObject(Vector3.down);
-        }
-    }
 
-    
-    void RotateObject(Vector3 direction)
-    {
-        
-        transform.Rotate(direction * rotationSpeed * Time.deltaTime);
+        // Nesneyi döndür
+        transform.rotation = Quaternion.Euler(-rotationY, rotationX, 0);
     }
 }

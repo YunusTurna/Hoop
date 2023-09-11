@@ -6,15 +6,22 @@ public class BallScript : MonoBehaviour
 {
 
     Rigidbody rb;
+    HoopCreator hp;
     [SerializeField] private float forcePower = 10f;
+    
     public bool camLock = false;
 
     public int score = 0;
     
     
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        hp = GameObject.FindGameObjectWithTag("Platform").GetComponent<HoopCreator>();
+    }
+    private void Start()
+    {
+        transform.position = GameObject.FindGameObjectWithTag("BallPoint").transform.position;
     }
     void OnCollisionEnter(Collision other)
     {

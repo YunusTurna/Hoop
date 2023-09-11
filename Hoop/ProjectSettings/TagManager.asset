@@ -9,6 +9,8 @@ TagManager:
   - Score
   - ScoreReducer
   - ScoreMultiplier
+  - Platform
+  - BallPoint
   layers:
   - Default
   - TransparentFX

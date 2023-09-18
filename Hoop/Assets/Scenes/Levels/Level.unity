@@ -271,6 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forcePower: 200
+  newBall: {fileID: 0}
   camLock: 0
   score: 0
 --- !u!1 &705507993
@@ -802,6 +803,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 206287884809264267, guid: 543c9394d2ee96941869f843ed455601,
+        type: 3}
+      propertyPath: numberOfHoops
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 942803814219694632, guid: 543c9394d2ee96941869f843ed455601,
         type: 3}
       propertyPath: m_Name

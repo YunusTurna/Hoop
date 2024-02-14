@@ -5,7 +5,7 @@ using UnityEngine;
 public class RingAdjustment : MonoBehaviour
 {
     [SerializeField] private GameObject polePrefab;
-    [SerializeField] private GameObject ringsPrefab;
+    [SerializeField] private GameObject[] ringPrefabs;
     [SerializeField] private GameObject lastRing;
     private GameObject[] ringArray;
     [SerializeField] private Vector3[] ringRotations;
@@ -27,7 +27,7 @@ public class RingAdjustment : MonoBehaviour
     {
         for (int i = 0; i < ringCount - 1; i++)
         {
-            GameObject ring = Instantiate(ringsPrefab, transform);
+            GameObject ring = Instantiate(ringPrefabs[Random.Range(0,ringPrefabs.Length)], transform);
             ringArray[i] = ring;
             int ringRotationIndex = Random.Range(0, rotations.Length);
             ringArray[i].transform.position = new Vector3(transform.position.x, i == 0 ? transform.position.y : ringArray[i - 1].transform.position.y - ringDistance, transform.position.z);
